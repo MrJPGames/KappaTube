@@ -31,13 +31,13 @@
 // Include the main libnx system header, for Switch development
 #include <switch.h>
 
-void openYoutube() 
+void openTwitch() 
 {
     Result rc;
     WebCommonConfig config;
 
     // Create the config.
-    rc = webPageCreate(&config, "http://youtube.com");
+    rc = webPageCreate(&config, "http://m.twitch.tv");
 
     if (R_SUCCEEDED(rc)) {
         rc = webConfigSetWhitelist(&config, "^http*"); // Keeping the whitelist matching everything (cleaner/less annoying).
@@ -57,21 +57,21 @@ int main(int argc, char* argv[])
 {
     consoleInit(NULL);
 
-    printf("Lennytube\n\nPress PLUS to close.\n");
+    printf("KappaTube\n\nPress PLUS to close.\n");
 
     bool isApp = true;
     if (!(appletGetAppletType() == AppletType_Application)) {
-        printf(CONSOLE_RED "Not running in APPLICATION mode. Not launching Youtube.\n");
+        printf(CONSOLE_RED "Not running in APPLICATION mode. Not launching Twitch.\n");
         printf("Launch this program from APPLICATION mode instead.\n");
         printf(CONSOLE_YELLOW "If you are using Atmosphere (you should),\ndo not mitm the album but an actual title.\n\n");
         isApp = false;
     } else {
-        printf(CONSOLE_GREEN "Press A to start YouTube (needed if you manually exited).\n\n");
+        printf(CONSOLE_GREEN "Press A to start Twitch (needed if you manually exited).\n\n");
     }
-    printf(CONSOLE_RESET "Copyright (c) Valentijn \"noirscape\" V., 2019\n\nReleased under the AGPLv3.\nNot licensable under later versions and clause 7b and 7c are in effect.");
+    printf(CONSOLE_RESET "Copyright (c) Valentijn \"noirscape\" V., 2019 for Lennytube\nCopyright (c) MrJPGames for minor mods to make it a twitch app instead\n\nReleased under the AGPLv3.\nNot licensable under later versions and clause 7b and 7c are in effect.");
 
     if (isApp)
-        openYoutube();
+        openTwitch();
     // Main loop
     while (appletMainLoop())
     {
@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
 
         if (kDown & KEY_A)
             if (isApp)
-                openYoutube();
+                openTwitch();
         consoleUpdate(NULL);
     }
     consoleExit(NULL);
