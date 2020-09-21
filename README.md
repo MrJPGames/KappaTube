@@ -1,4 +1,4 @@
-## LennyTube
+## KappaTube
 
 Twitch on the Nintendo Switch (NRO format).
 
