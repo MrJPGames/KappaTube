@@ -1,17 +1,10 @@
 ## LennyTube
 
-Youtube on the Nintendo Switch (NRO format).
+Twitch on the Nintendo Switch (NRO format).
 
 ## Rationale
 
-The YouTube title on the Switch is only usable if one is not banned, since the title in question logs in on Nintendo Network. Whilst it's possible to bypass this by patching the YouTube app, this is far from ideal as the resulting file is not allowed to be shared.
-
-This application aims to circumvent that last problem by launching it's own WifiApplet, meaning no copyrighted data is ever involved.
-
-## Limitations
-
-- Desktop mode only (TV mode is inaccessible, Mobile doesn't play videos properly).
-- Works only from APPLICATION mode (it will display a warning and instructions how to do this if you're still running from APPLET).
+There is no official twitch client. This works pretty well. But because I used m.twitch.tv instead of the full desktop twitch you cannot log-in and see your following list. Chat is also limited to viewing only, and cannot be viewed while watching a stream (though many streamers include chat as part of their stream anyways). In other words it's very bare-bones but it does allow for easily viewing twitch streams.
 
 ## License
 
